@@ -1,0 +1,142 @@
+html {
+  min-height: 100%;
+}
+body {
+  background-image: url('the_blue_lagoon.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-family: 'Nunito Sans', sans-serif;
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 80px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+h1 {
+font-weight: normal;
+font-size: 50px;
+text-align: center;
+padding-top: 100px;
+}
+
+input {
+  background-color: transparent;
+  color: white;
+  width: 90%;
+  text-align: left;
+  border: 0;
+  border-bottom: solid 3px;
+  border-color: white;
+  font-size: 18px;
+  color: white;
+}
+
+input::placeholder {
+  color: white;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:focus::placeholder {
+  color: #d3d3d3;
+}
+
+form {
+  text-align: center;
+  height: 50px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px;
+  display: flex;
+}
+
+#submit {
+  float: right;
+  width: 10%;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 30px;
+}
+.search {
+  transition: all 0.5s linear;
+}
+button:focus {
+  outline: none;
+}
+
+button:active {
+  outline: none;
+}
+
+footer {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-left:auto;
+  margin-right:auto;
+  width: 80%;
+}
+
+.track {
+  text-align: left;
+  display: flex;
+  padding-left: 30px;
+  border-bottom: solid 2px white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  align-items: center;
+}
+
+
+.image-container {
+  width: 20%;
+  align-self: center;
+}
+
+.song_info {
+  width: 80%;
+  margin-left: 5%;
+}
+
+.second_row {
+  display: flex;
+}
+
+p {
+  margin: 0;
+}
+
+.play {
+  font-size: 2em;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  height: 125px;
+  width: 125px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.play:focus {
+  border: none;
+}
+
+h3 {
+  margin: 0;
+}

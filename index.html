@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+    <title>SoundCloud Music Player</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>What would you like to<br>listen to?</h1>
+      </header>
+      <section class="search">
+        <form class="search-form">
+          <input type="text" id="search_query" placeholder="Search by artist name or song" autocomplete="off">
+          <button id="submit" type="submit">&gt;</button>
+        </form>
+      </section>
+      <section class="results"></section>
+      <footer><span>Made using SoundCloud's API</span></footer>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
