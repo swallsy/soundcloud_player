@@ -1,8 +1,3 @@
-// TO DO//
-
-// 1. Add in functionality to make the play button change to pause and vice versa
-// 4. If time, add in additional animations
-
 const searchInput = document.querySelector("#search_query");
 const searchForm = document.querySelector(".search-form");
 const results = document.querySelector(".results");
@@ -15,8 +10,6 @@ let playing;
 // SEARCH BY TRACK FROM USERNAME //
 searchForm.addEventListener('submit', searchMusic);
 
-
-
 function searchMusic(e) {
   'use strict';
 
@@ -24,9 +17,6 @@ function searchMusic(e) {
 
   header.classList.add('collapsed');
   footer.classList.add('collapsed');
-
-  // searchContainer.style.transition='all 5s';
-
 
   setTimeout(function() {
     let searchQuery = searchInput.value;
