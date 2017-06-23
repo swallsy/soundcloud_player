@@ -70,7 +70,7 @@ function searchMusic(e) {
                 let audioPlayer = document.querySelector(`#audioFile${j}`);
 
                 function updateButton() {
-                  let icon = this.paused ? "►" : "❚ ❚";
+                  let icon = this.paused ? "▶" : "❚ ❚";
                   audioButton.textContent = icon;
                 }
 
