@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -22,9 +23,14 @@
       </form>
     </section>
     <section class="results"></section>
-    <footer><a href="https://developers.soundcloud.com/docs/api/guide" target="_blank"><i class="fa fa-soundcloud" aria-hidden="true"></i><span>made using SoundCloud's API</span></a></footer>
+    <div id="footer-wrapper">
+      <footer><a href="https://developers.soundcloud.com/docs/api/guide" target="_blank"><i class="fa fa-soundcloud" aria-hidden="true"></i><span>made using SoundCloud's API</span></a></footer>
+    </div>
   </div>
   <script src="main.js"></script>
+  <script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.18.12'><\/script>".replace("HOST", location.hostname));
+//]]></script>
 </body>
 
 </html>
