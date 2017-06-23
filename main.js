@@ -31,7 +31,7 @@ function searchMusic(e) {
   setTimeout(function() {
     let searchQuery = searchInput.value;
 
-    fetch(`http://api.soundcloud.com/tracks/?q=${searchQuery}&client_id=8538a1744a7fdaa59981232897501e04`)
+    fetch(`https://api.soundcloud.com/tracks/?q=${searchQuery}&client_id=8538a1744a7fdaa59981232897501e04`)
       .then(
 
 
