@@ -247,8 +247,9 @@ footer.collapsed {
   }
 
   header {
-    height: 250px;
+    height: 200px;
   }
+
   h1 {
     font-size: 28px;
     padding-top: 60px;
