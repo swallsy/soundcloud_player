@@ -1,8 +1,12 @@
+@charset "UTF-8";
+
 html {
   min-height: 100%;
 }
+
 body {
   background-image: url('the_blue_lagoon.jpg');
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,28 +17,108 @@ body {
   padding-bottom: 80px;
 }
 
+/* General Styling */
+
 a {
-  color: white;
   text-decoration: none;
+  color: rgba(255, 255, 255, .8);
 }
+
+a:hover {
+  color: white;
+}
+
 
 h1 {
 font-weight: normal;
-font-size: 50px;
+font-size: 40px;
 text-align: center;
 padding-top: 100px;
+font-family: 'Raleway', sans-serif;
+}
+
+h3 {
+  margin: 0;
+  font-weight: normal;
+}
+
+p {
+  margin: 0;
+  font-weight: lighter;
+}
+
+i {
+  padding-right: 5px;
+  font-size: 18px;
+}
+
+.fa-soundcloud {
+  font-size: 16px;
+}
+
+audio {
+  display: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  outline: none;
+  border: solid 2px white;
+}
+
+/* Header "What Would You Like to Listen to?" */
+
+header {
+  overflow: hidden;
+  height: 300px;
+  transition: height 1s, opacity .01s;
+  opacity: 1;
+}
+
+header.h1 {
+  transition-delay: .5s;
+}
+
+header.h1.collapsed {
+  font-size: 0px;
+}
+
+header.collapsed {
+  height: 0px;
+  opacity: 0;
+}
+
+/* Search Area */
+
+
+form {
+  text-align: center;
+  height: 50px;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  display: flex;
 }
 
 input {
   background-color: transparent;
   color: white;
-  width: 90%;
+  width: 95%;
   text-align: left;
   border: 0;
-  border-bottom: solid 3px;
+  border-bottom: solid 2px;
   border-color: white;
   font-size: 18px;
   color: white;
+}
+
+input:searched {
+  text-align: center;
+  color: red;
 }
 
 input::placeholder {
@@ -46,42 +130,24 @@ input:focus {
 }
 
 input:focus::placeholder {
-  color: #d3d3d3;
+  color: rgba(255, 255, 255, .8);
 }
 
-form {
-  text-align: center;
-  height: 50px;
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 100px;
-  display: flex;
-}
-
-#submit {
-  float: right;
-  width: 10%;
-  background: none;
-  color: white;
-  border: none;
-  font-size: 30px;
-}
 .search {
   transition: all 0.5s linear;
 }
-button:focus {
-  outline: none;
+
+#submit {
+  width: 5%;
+  background: none;
+  color: white;
+  border: none;
+  border-bottom: solid 2px white;
+  font-size: 20px;
+  padding-bottom: 5px;
 }
 
-button:active {
-  outline: none;
-}
-
-footer {
-  text-align: center;
-  padding-top: 100px;
-}
+/* Returned Items */
 
 .results {
   display: flex;
@@ -89,54 +155,79 @@ footer {
   margin-top: 50px;
   margin-left:auto;
   margin-right:auto;
-  width: 80%;
+  width: 60%;
 }
 
 .track {
   text-align: left;
   display: flex;
   padding-left: 30px;
-  border-bottom: solid 2px white;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  border-bottom: solid 1px white;
+  padding-top: 30px;
+  padding-bottom: 30px;
   align-items: center;
 }
 
 
-.image-container {
-  width: 20%;
-  align-self: center;
+.likes {
+  font-size: 14px;
+  float: right;
+}
+
+.user {
+  font-size: 14px;
+  color: rgba(255, 255, 255, .8);
+  padding-bottom: 5px;
 }
 
 .song_info {
   width: 80%;
   margin-left: 5%;
+  font-size: 16px;
 }
 
 .second_row {
   display: flex;
 }
 
-p {
-  margin: 0;
-}
+/* Play Button */
 
 .play {
   font-size: 2em;
   border: none;
   color: white;
   border-radius: 50%;
-  height: 125px;
-  width: 125px;
+  height: 140px;
+  width: 140px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: black;
+  font-family: Avenir;
+  opacity: .8;
+}
+
+.play:hover {
+  opacity: 1;
+  font-size: 2.4em;
 }
 
 .play:focus {
   border: none;
 }
 
-h3 {
-  margin: 0;
+
+/* Footer */
+
+footer {
+  text-align: center;
+  transition: height 1s, opacity .2s;
+  padding-top: 10%;
+  font-size: 14px;
+  opacity: 1;
+}
+
+footer.collapsed {
+  height: 0px;
+  opacity: 0;
 }
