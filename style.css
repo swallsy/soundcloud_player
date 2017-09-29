@@ -132,6 +132,10 @@ input:focus::placeholder {
   transition: all 0.5s linear;
 }
 
+#search_query {
+  font-weight: lighter;
+}
+
 #submit {
   width: 5%;
   background: none;
@@ -187,7 +191,7 @@ input:focus::placeholder {
 
 /* Play Button */
 
-.play {
+.play_button {
   font-size: 2em;
   border: none;
   color: white;
@@ -202,7 +206,7 @@ input:focus::placeholder {
   opacity: .8;
 }
 
-.play:hover {
+.play_button:hover {
   opacity: 1;
   font-size: 2.4em;
 }
@@ -226,6 +230,26 @@ footer {
 footer.collapsed {
   height: 0px;
   opacity: 0;
+}
+
+.play {
+  border-width: 20px 0px 20px 40px;
+  border-color: transparent transparent transparent white;
+  border-style: solid;
+  height: 0;
+  width: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.pause {
+  border-width: 0px 20px 0px 20px;
+  border-color: white;
+  height: 40px;
+  width: 10px;
+  border-style: solid;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 @media only screen and (max-width: 500px) {
@@ -255,7 +279,7 @@ footer.collapsed {
     bottom: 30px;
   }
 
-  .play {
+  .play_button {
     width: 80px;
     height: 80px;
   }
@@ -277,4 +301,23 @@ footer.collapsed {
     font-size: 12px;
   }
 
+  .play {
+    border-width: 10px 0px 10px 20px;
+    border-color: transparent transparent transparent white;
+    border-style: solid;
+    height: 0;
+    width: 0;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .pause {
+    border-width: 0px 10px 0px 10px;
+    border-color: white;
+    height: 20px;
+    width: 5px;
+    border-style: solid;
+    display: inline-block;
+    vertical-align: middle;
+  }
 }

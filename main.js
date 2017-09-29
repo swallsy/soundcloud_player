@@ -46,7 +46,7 @@ function searchMusic(e) {
                 let markup = `
                       <div class="track">
                         <div class="image-container">
-                          <button id="playButton${i}" class="play" style="background-image: url(${artwork})">&#9654;</button>
+                          <button id="playButton${i}" class="play_button" style="background-image: url(${artwork})"><div class="play"></div></button>
                         </div>
                           <a href="${soundcloudLink}" class="song_info" target="_blank">
                             <p class="user">${user}</p>
@@ -61,7 +61,6 @@ function searchMusic(e) {
                       </div>
                   `
                 results.innerHTML += markup;
-
               }
 
               for (let j = 0; j < data.length; j++) {
@@ -70,8 +69,8 @@ function searchMusic(e) {
                 let audioPlayer = document.querySelector(`#audioFile${j}`);
 
                 function updateButton() {
-                  let icon = this.paused ? "▶" : "❚ ❚";
-                  audioButton.textContent = icon;
+                  let icon = this.paused ? '<div class="play"></div>' : '<div class="pause"></div>';
+                  audioButton.innerHTML = icon;
                 }
 
                 function playPauseAudio() {
