@@ -1,5 +1,5 @@
 const searchInput = document.querySelector("#search_query");
-const searchForm = document.querySelector(".search-form");
+const searchForm = document.querySelector(".search_form");
 const results = document.querySelector(".results");
 const searchSubmitButton = document.querySelector("#submit");
 const header = document.querySelector("header");
@@ -45,8 +45,8 @@ function searchMusic(e) {
 
                 let markup = `
                       <div class="track">
-                        <div class="image-container">
-                          <button id="playButton${i}" class="play_button" style="background-image: url(${artwork})"><div class="play"></div></button>
+                        <div class="image_container">
+                          <button id="play_button${i}" class="play_button" style="background_image: url(${artwork})"><div class="play"></div></button>
                         </div>
                           <a href="${soundcloudLink}" class="song_info" target="_blank">
                             <p class="user">${user}</p>
@@ -56,7 +56,7 @@ function searchMusic(e) {
                             </div>
                           </a>
                         <section class="player">
-                          <audio id="audioFile${i}" class="music-player" controls="controls" src="${audioFile}/?client_id=8538a1744a7fdaa59981232897501e04"></audio>
+                          <audio id="audio_file${i}" class="music_player" controls="controls" src="${audioFile}/?client_id=8538a1744a7fdaa59981232897501e04"></audio>
                         </section>
                       </div>
                   `

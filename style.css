@@ -214,7 +214,7 @@ input:focus::placeholder {
 
 /* Footer */
 
-#footer-wrapper {
+#footer_wrapper {
   width: 100%;
   position: fixed;
   bottom: 80px;
@@ -275,7 +275,7 @@ footer.collapsed {
     padding-top: 60px;
   }
 
-  #footer-wrapper {
+  #footer_wrapper {
     bottom: 30px;
   }
 
