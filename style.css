@@ -5,12 +5,13 @@ html {
 }
 
 body {
-  background-image: url('the_blue_lagoon.jpg');
+  /* background-image: url('the_blue_lagoon.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
   color: white;
+  background: red;
   font-family: 'Nunito Sans', sans-serif;
   position: relative;
   min-height: 100%;
