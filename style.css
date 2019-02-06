@@ -1,21 +1,33 @@
-@charset "UTF-8";
+/* @charset "UTF-8"; */
 
 html {
   min-height: 100%;
 }
 
 body {
-  /* background-image: url('the_blue_lagoon.jpg');
+  background-image: url('the_blue_lagoon.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; */
+  background-size: cover;
   color: white;
-  background: red;
   font-family: 'Nunito Sans', sans-serif;
   position: relative;
   min-height: 100%;
   padding-bottom: 80px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  outline: none;
+  border: solid 3px white;
 }
 
 /* General Styling */
@@ -61,14 +73,7 @@ audio {
   display: none;
 }
 
-button:focus {
-  outline: none;
-}
 
-button:active {
-  outline: none;
-  border: solid 3px white;
-}
 
 /* Header "What Would You Like to Listen to?" */
 
