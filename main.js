@@ -5,34 +5,25 @@ const searchSubmitButton = document.querySelector("#submit");
 const header = document.querySelector("header");
 const searchContainer = document.querySelector(".search");
 const footer = document.querySelector("footer");
+
 let playing;
 
-// SEARCH BY TRACK FROM USERNAME //
-searchForm.addEventListener('submit', searchMusic);
+const collapseElement = (elementToCollapse) => {
+  elementToCollapse.classList.add('collapsed');
+}
 
-function searchMusic(e) {
-  'use strict';
-
+const fetchFromSoundcloud = (e) => {
   e.preventDefault();
-
-  header.classList.add('collapsed');
-  footer.classList.add('collapsed');
-
   setTimeout(function() {
     let searchQuery = searchInput.value;
-
     fetch(`https://api.soundcloud.com/tracks/?q=${searchQuery}&client_id=8538a1744a7fdaa59981232897501e04`)
       .then(
-
-
         function(response) {
           if (response.status !== 200) {
             console.log('Looks like there was a problem. Status Code: ' + response.status);
-            return;
-
           } else {
-
             response.json().then(function(data) {
+              // clear out the existing tracks if there are any
               results.innerHTML = "";
               for (let i = 0; i < data.length; i++) {
                 let artwork = data[i].artwork_url;
@@ -46,7 +37,7 @@ function searchMusic(e) {
                 let markup = `
                       <div class="track">
                         <div class="image_container">
-                          <button id="playButton${i}" class="play_button" style="background_image: url(${artwork})"><div class="play"></div></button>
+                          <button id="playButton${i}" class="play_button" style="background-image: url(${artwork})"><div class="play"></div></button>
                         </div>
                           <a href="${soundcloudLink}" class="song_info" target="_blank">
                             <p class="user">${user}</p>
@@ -64,7 +55,6 @@ function searchMusic(e) {
               }
 
               for (let j = 0; j < data.length; j++) {
-
                 let audioButton = document.querySelector(`#playButton${j}`);
                 let audioPlayer = document.querySelector(`#audioFile${j}`);
 
@@ -85,16 +75,21 @@ function searchMusic(e) {
                     playing = false;
                   }
                 }
-
                 audioPlayer.addEventListener('play', updateButton);
                 audioPlayer.addEventListener('pause', updateButton);
                 audioButton.addEventListener('click', playPauseAudio);
-
-
               } //End second for loop
             }) // End response json
           } // end
         } // end function response
       ) // end then
   }, 300);
-} //end search  function
+}
+
+const searchMusic = (e) => {
+  collapseElement(header);
+  collapseElement(footer);
+  fetchFromSoundcloud(e);
+}
+
+searchForm.addEventListener('submit', searchMusic);
